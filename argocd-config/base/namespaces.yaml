@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/sksat/orion-apps.git
-    targetRevision: orion
+    targetRevision: argocd
     path: namespaces/base
   destination:
     server: https://kubernetes.default.svc
