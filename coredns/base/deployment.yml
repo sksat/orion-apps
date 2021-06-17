@@ -12,29 +12,29 @@ spec:
   template:
     spec:
       containers:
-        name: coredns
+      - name: coredns
         image: coredns/coredns:1.8.4
         imagePullPolicy: IfNotPresent
         args: [ "-conf", "/etc/coredns/Corefile" ]
         ports:
-          - containerPort: 53
-            name: dns
-            protocol: UDP
-          - containerPort: 53
-            name: dns-tcp
-            protocol: TCP
-          - containerPort: 9153
-            name: metrics
-            protocol: TCP
+        - containerPort: 53
+          name: dns
+          protocol: UDP
+        - containerPort: 53
+          name: dns-tcp
+          protocol: TCP
+        - containerPort: 9153
+          name: metrics
+          protocol: TCP
         volumeMounts:
-          - name: config-volume
-            mountPath: /etc/coredns
-            readOnly: true
+        - name: config-volume
+          mountPath: /etc/coredns
+          readOnly: true
       restartPolicy: Always
       volumes:
         - name: config-volume
           configMap:
             name: coredns
             items:
-              - key: Corefile
-                path: Corefile
+            - key: Corefile
+              path: Corefile
