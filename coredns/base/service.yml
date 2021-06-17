@@ -5,10 +5,10 @@ metadata:
   namespace: sksat-system
 
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: coredns
   ports:
   - port: 53
+    protocol: UDP
     targetPort: 53
-    nodePort: 30053
