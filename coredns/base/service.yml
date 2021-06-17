@@ -4,7 +4,6 @@ metadata:
   name: coredns
   namespace: sksat-system
 
-internal: "true"
 spec:
   type: NodePort
   selector:

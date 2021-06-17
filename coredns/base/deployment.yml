@@ -13,6 +13,9 @@ spec:
     matchLabels:
       app: coredns
   template:
+    metadata:
+      labels:
+        app: coredns
     spec:
       containers:
       - name: coredns
