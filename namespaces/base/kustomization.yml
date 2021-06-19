@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - argocd.yml
 - sksat.yml
-- sandobox.yml
+- sandbox.yml
