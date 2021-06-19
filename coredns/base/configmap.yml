@@ -8,8 +8,10 @@ metadata:
 data:
   Corefile: |
     .:53 {
-        forward . 1.1.1.1 1.0.0.1 8.8.8.8 {
+        forward . tls://1.1.1.1 tls://1.0.0.1 1.1.1.1 1.0.0.1 8.8.8.8 {
             policy sequential
+            tls_servername clouflare-dns.com
+            health_check 5s
         }
 
         metadata
