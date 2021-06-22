@@ -8,7 +8,7 @@ spec:
       paths:
       - backend:
          service:
-            name: ingress-sample-nginx
+            name: ingress-sample-service
             port:
               number: 80
         path: /
