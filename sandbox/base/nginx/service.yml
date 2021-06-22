@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ingress-sample
+  name: ingress-sample-service
 spec:
+  selector:
+    app: nginx
   ports:
     - port: 80
       name: http
-  selector:
-    app: nginx

@@ -1,14 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: sample
+  name: ingress-sample
 spec:
   rules:
   - http:
       paths:
       - backend:
          service:
-            name: ingress-sample
+            name: ingress-sample-nginx
             port:
               number: 80
         path: /
