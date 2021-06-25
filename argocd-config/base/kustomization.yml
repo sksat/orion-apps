@@ -5,5 +5,6 @@ resources:
 - ingress.yml
 - argocd.yml
 - metallb.yml
+- monitoring.yml
 - coredns.yml
 - sandbox.yml
