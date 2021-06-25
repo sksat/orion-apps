@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
 - argocd.yml
 - ingress.yml
+- monitoring.yml
 - sksat.yml
 - sandbox.yml
